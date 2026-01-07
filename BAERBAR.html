@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bär Bar</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#header-image {
+  width: 100%;
+  aspect-ratio: 4 / 1;
+  background-color: #000;
+  background-image: url('https://i.postimg.cc/156KHtqN/PXL-20260105-161326992-MP-3.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid #ffbf2b;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  background-color: #ffbf2b;
+  flex-wrap: wrap;
+}
+
+.menu-button {
+  flex: 1;
+  min-width: 80px;
+  padding: 15px 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.menu-button:hover {
+  background-color: #e6ac00;
+}
+
+#content {
+  flex: 1;
+  padding: 20px;
+  font-size: 17px;
+  overflow-y: auto;
+}
+
+.page { display: none; }
+#page0 { display: block; }
+
+.wochenplan h2 {
+  font-size: 1.2em;
+  color: #333;
+  border-bottom: 2px solid #ffbf2b;
+  margin-top: 20px;
+}
+
+.wochenplan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wochenplan li {
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.slider-item {
+  background-color: #ffbf2b;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-content {
+  display: none;
+  padding: 15px;
+  background-color: #fff3cc;
+  border: 1px solid #ffbf2b;
+  border-top: none;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+    <div id="header-image"></div>
+
+<div id="menu">
+  <button class="menu-button" onclick="showPage('page1')">Wochenplan</button>
+  <button class="menu-button" onclick="showPage('page2')">Menü</button>
+  <button class="menu-button" onclick="showPage('page3')">Mieten</button>
+  <button class="menu-button" onclick="showPage('page4')">Reservieren<br>Bestellen</button>
+  <button class="menu-button" onclick="showPage('page0')">Über uns</button>
+</div>
+
+<div id="content">
+    <div id="page0" class="page">
+<h2>Was ist die Bär Bar?</h2>
+
+<p>
+Die Bär Bar ist ganz allgemein gesagt ein gemütliches Bistro zum Sitzen, Verweilen
+und vor allem zum Genießen.
+</p>
+
+<p>
+In der Bär Bar erhalten Sie gesunde, hausgemachte Suppen, Eintöpfe, Sandwiches,
+gelegentlich warme Speisen sowie Kuchen, Desserts, Kaffeespezialitäten,
+verschiedene hochwertige Tees, alkoholfreie Getränke und hausgemachte Limonaden.
+</p>
+
+<p>
+Um das täglich wechselnde Angebot zu sehen, folgen Sie uns auf
+<a href="https://www.instagram.com/baer.bar216?igsh=c3R0OXJxOWZubTMx" target="_blank">Instagram</a>,
+<a href="https://www.facebook.com/share/1C7kyamTzM/" target="_blank">Facebook</a>
+oder wechseln Sie zum
+<span onclick="showPage('page1')" style="cursor:pointer; text-decoration:underline;">
+Wochenplan
+</span>.
+</p>
+
+<p>
+Klicken Sie
+<a href="https://maps.app.goo.gl/akBYJPRiESMx21sZ8" target="_blank">hier</a>,
+um zu Google Maps zu gelangen und die Meinungen anderer Gäste zu lesen.
+</p>
+
+<h2>Aktuelle Infos</h2>
+
+<section>
+<h3>Liebe Gäste der Bär Bar,</h3>
+
+<p><strong>
+Allen ein gutes, gesundes, friedliches und erfolgreiches neues Jahr 2026!
+</strong></p>
+
+<p>
+Den ersten Monat im neuen Jahr – nach vielen Feiertagen mit festlichem
+und deftigem Essen – habe ich der etwas leichteren Kost gewidmet.
+</p>
+
+<p>
+Proteinreiche Hülsenfrüchte sowie verschiedene Kohl- und Rübensorten,
+reich an Vitamin C, K, B und Beta-Carotinen.
+</p>
+
+<p>
+Vegetarische und vegane Gerichte, die kein Fleisch vermissen lassen,
+sowie leichtere Fleischgerichte für diejenigen, die es wünschen:
+Pute, Huhn, Kaninchen, Fisch sowie mageres Rindfleisch.
+</p>
+
+<p>
+Essen Sie gesünder durch Suppen und Salate, abwechslungsreicher durch
+ungewöhnliche und weniger bekannte Gerichte, die Ihren Gaumen erfreuen
+und bereichern.
+</p>
+
+<p><strong>Saisonal, frisch – einfach anders!</strong></p>
+<p><strong>Willkommen in der Bär Bar!</strong></p>
+</section>
+</div>
+<div id="page1" class="page">
+<div class="wochenplan">
+
+<h2>Dienstag, 06. Januar</h2>
+<ul>
+  <li>
+    <strong>Maronen-Cremesuppe</strong> – VEGI – 9,90 € (B/G)<br>
+    <small>
+      Maronen, Zwiebeln, Möhren, Kartoffeln, Äpfel, Sahne,
+      Thymian, Cashewkerne, Croutons, Petersilie
+    </small>
+  </li>
+
+  <li>
+    <strong>Hähnchenkeule in Tomaten-Zwiebelsauce mit Reis</strong> – 12,90 € (R/W)<br>
+    <small>
+      Hähnchenkeule, Tomaten, Zwiebeln, Möhren, Thymian, Reis
+    </small>
+  </li>
+</ul>
+
+<h2>Mittwoch, 07. Januar</h2>
+<ul>
+  <li>
+    <strong>Rote Thai-Hühnersuppe</strong> – 9,90 € (R)<br>
+    <small>
+      Hähnchenfilet, Möhren, Paprika, Bambus, Porree, Zwiebeln,
+      Kaiserschoten, Chili, Kokosmilch, Glasnudeln, rote Currypaste
+    </small>
+  </li>
+
+  <li>
+    <strong>Spitzkohl-Linsen-Kichererbsen-Curry</strong> – VEGAN – 10,90 € (G)<br>
+    <small>
+      Spitzkohl, Kartoffeln, rote Linsen, Kichererbsen,
+      Curry, Kreuzkümmel, Kokosmilch, Chili, frischer Koriander
+    </small>
+  </li>
+</ul>
+
+<h2>Donnerstag, 08. Januar</h2>
+<ul>
+  <li>
+    <strong>Rote-Beete-Cremesuppe</strong> – VEGI – 9,90 € (R/W/G)<br>
+    <small>
+      Bio-Rote-Bete, Kartoffeln, Zwiebeln, Möhren, Apfel,
+      Thymian, Feta, Croutons, Crème fraîche, Petersilie
+    </small>
+  </li>
+
+  <li>
+    <strong>Putengulasch mit Paprika & Vollkornnudeln</strong> – 12,90 € (G/R)<br>
+    <small>
+      Putenbrust, Tomaten, Kartoffeln, Zwiebeln,
+      Kreuzkümmel, Paprika, Vollkornnudeln
+    </small>
+  </li>
+</ul>
+
+<h2>Freitag, 09. Januar</h2>
+<ul>
+  <li>
+    <strong>Spinat-Kichererbsen-Tahini-Suppe</strong> – VEGAN – 8,90 € (G)<br>
+    <small>
+      Spinat, Zwiebeln, Möhren, Kartoffeln, Kichererbsen,
+      Thymian, Majoran, Liebstöckel, Sesampaste
+    </small>
+  </li>
+
+  <li>
+    <strong>Sauerkraut-Rinderhack-Auflauf mit Jasminreis</strong> – 12,90 €<br>
+    <small>
+      Weißweinsauerkraut, Rinderhackfleisch, Zwiebeln,
+      Möhren, Bohnenkraut, Thymian, Jasminreis, Sahnejoghurt
+    </small>
+  </li>
+</ul>
+
+</div>
+</div>
+
+
+    <div id="page2" class="page">
+<h2>Bleibendes Menü</h2>
+
+<div class="slider-item" onclick="toggleSlider('s1')">
+Sandwiches <span>▼</span>
+</div>
+
+<div id="s1" class="slider-content">
+  <b>401. Sandwich Vegani – 7,50 €</b><br>
+  <small>Pesto, gegrillte Paprika, Rucola, Balsamico-Honig-Dressing</small><br><br>
+
+  <b>402. Sandwich Gouda Tomate – 8,90 €</b><br>
+  <small>Frischkäse, Gouda, Tomate, Kräuter-Gurken-Quark</small><br><br>
+
+  <b>403. Sandwich Tomate Mozzarella Pesto – 9,90 €</b><br>
+  <small>Pesto, Tomaten, Mozzarella, Gouda, Rucola, Basilikumöl</small><br><br>
+
+  <b>404. Sandwich Salami Gouda – 8,90 €</b><br>
+  <small>Frischkäse, Salami, Cheddar, Paprika, Gurken-Quark</small><br><br>
+
+  <b>410. Sandwich Brie & Gouda treffen Birne – 10,90 €</b><br>
+  <small>Kräuteraufstrich, Weichkäse, Gouda, Birne, Rucola, Balsamico-Honig</small><br><br>
+
+  <b>411. Sandwich Chicky Americano – 10,90 €</b><br>
+  <small>Hähncheninnenfilet, Gouda, Coleslaw</small><br><br>
+
+  <b>413. Sandwich Tonno – 10,90 €</b><br>
+  <small>Thunfischsalat, weiße Bohnen, rote Zwiebeln, Oliven, Rucola, Senf-Dressing</small>
+</div>
+<div class="slider-item" onclick="toggleSlider('s4')">
+Warme Getränke <span>▼</span>
+</div>
+
+<div id="s4" class="slider-content">
+
+<h3>Kaffeespezialitäten</h3>
+<ul>
+  <li>Espresso – 2,20 €</li>
+  <li>Espresso Doppio – 3,80 €</li>
+  <li>Espresso Macchiato – 2,40 €</li>
+  <li>Kaffee – 2,50 €</li>
+  <li>Kaffee Doppio – 4,80 €</li>
+  <li>Cappuccino – 2,80 €</li>
+  <li>Cappuccino mit Sahne – 3,20 €</li>
+  <li>Milchkaffee – 3,30 €</li>
+  <li>Latte Macchiato – 3,40 €</li>
+  <li>Latte Macchiato Vanille – 3,80 €</li>
+  <li>Latte Macchiato Caramel – 3,80 €</li>
+  <li>Latte Macchiato Haselnuss – 3,80 €</li>
+</ul>
+
+<h3>Tee & Heißgetränke</h3>
+<ul>
+  <li>Tee (Glas) – 3,40 €</li>
+  <li>Tee (Kanne) – 6,90 €</li>
+  <li>Heiße Zitrone mit Honig – 3,20 €</li>
+  <li>Heiße Milch mit Honig</li>
+  <li>Immun-Boost (nur im Glas) – 3,80 €</li>
+</ul>
+
+<h3>Teeauswahl</h3>
+<ul>
+  <li>Grüntee – Japanische Kirsche</li>
+  <li>Grüntee – Jasmin</li>
+  <li>Kräutertee – Oase der Ruhe</li>
+  <li>Schwarztee – Ostfriesen-Mischung</li>
+  <li>Früchtetee – Passionsfrucht</li>
+</ul>
+
+<h3>Schokoladen</h3>
+<ul>
+  <li>Heiße dunkle Schokolade – mit Sahne 3,80 € / ohne Sahne 3,40 €</li>
+  <li>Heiße weiße Schokolade – mit Sahne 3,80 € / ohne Sahne 3,40 €</li>
+  <li>Heiße Schokolade – mit Sahne 3,80 € / ohne Sahne 3,50 €</li>
+  <li>Ciocolatta – 4,60 €</li>
+</ul>
+
+</div>
+
+<div class="slider-item" onclick="toggleSlider('s5')">
+Kalte Getränke <span>▼</span>
+</div>
+
+<div id="s5" class="slider-content">
+
+<h3>Erfrischungsgetränke</h3>
+<ul>
+  <li>Cola / Fanta / Mezzo – 3,40 €</li>
+  <li>Chino – 3,20 €</li>
+  <li>Orangina gelb – 3,20 €</li>
+  <li>Orangina rot – 3,20 €</li>
+</ul>
+
+<h3>Mineralwasser</h3>
+<ul>
+  <li>San Pellegrino klein – 2,90 €</li>
+  <li>San Pellegrino groß – 6,50 €</li>
+  <li>Gerolsteiner – 2,70 €</li>
+  <li>Aqua Panna – 2,90 €</li>
+</ul>
+
+<h3>Säfte</h3>
+<ul>
+  <li>Apfelsaft – 3,80 €</li>
+  <li>Orangensaft – 3,80 €</li>
+  <li>Maracujasaft – 3,80 €</li>
+  <li>Pfirsichsaft – 3,80 €</li>
+</ul>
+
+<h3>Hausgemachte Getränke</h3>
+<ul>
+  <li>Minz-Zitronen-Honig-Limonade (0,25 l) – 3,90 €</li>
+</ul>
+
+<h3>Schorlen</h3>
+<ul>
+  <li>
+    0,3 l – 3,40 €<br>
+    Erdbeer / Maracuja / Grapefruit / Apfel naturtrüb / Orange / Johannisbeere
+  </li>
+</ul>
+
+</div>
+</div> <!-- #content -->
+    <div id="page3" class="page">
+<h2>Bär Bar mieten</h2>
+<p>Haben sie einen besonderen Anlass? dann mieten sie die bär bar<br>
+  es kostet sie 79 euro pro stunde und geht nur samstags und sonntags
+</p>
+</div>
+
+<div id="page4" class="page">
+<h2>Reservieren</h2>
+<p>
+Um zu reservieren, rufen Sie bitte
+<a href="tel:+4917621524047">+49 176 21524047</a>
+an oder schreiben Sie uns über WhatsApp.
+</p>
+
+<h2>Bestellen</h2>
+<p><strong>⚠ Bestellungen sind ausschließlich zur Abholung möglich ⚠</strong></p>
+<p>
+Bitte rufen Sie zur Bestellung
+<a href="tel:+4917621524047">+49 176 21524047</a>
+an. Sie werden telefonisch beraten.
+</p>
+</div>
+</div> <!-- #content -->
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+  window.scrollTo(0,0);
+}
+
+function toggleSlider(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
